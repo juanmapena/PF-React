@@ -1,0 +1,31 @@
+.navbar {
+    background-color: #eeeeee;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.navbarLogo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbarList {
+    list-style: none;
+    display: flex;
+    margin-left: 12rem;
+}
+
+.navbarItem {
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.navbar-item:last-child {
+    margin-right: 0;
+}
+
+.imgCarrito{
+    margin-left: 10rem;
+}
