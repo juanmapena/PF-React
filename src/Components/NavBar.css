@@ -1,14 +1,19 @@
 .navbar {
-    background-color: #eeeeee;
-    color: black;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     padding: 1rem 2rem;
 }
 
-.navbarLogo {
+.divNavbarLogo {
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
 }
 
 .navbarList {
@@ -18,6 +23,7 @@
 }
 
 .navbarItem {
+    font-size: 18px;
     margin-right: 1rem;
     cursor: pointer;
 }
@@ -27,5 +33,13 @@
 }
 
 .imgCarrito{
-    margin-left: 10rem;
+    margin-left: 37rem;
+    width: 20px;
+    height: 20px;
+}
+
+
+.spanStyle{
+    font-size: 14px;
+    margin-left: 10px;
 }
