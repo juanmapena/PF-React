@@ -7,7 +7,7 @@ function CartWidget() {
   return (
     <div>
         <img src={imagen} alt='Carrito' className='imgCarrito'/>
-        <span className='spanStyle'>(5)</span>
+        {/* <span className='spanStyle'>(5)</span> */}
         
     </div>
   )
