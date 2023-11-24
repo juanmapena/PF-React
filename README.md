@@ -15,4 +15,5 @@ Para poder llevar a cabo dicho proyecto, se utilizaron diferentes tecnologias. E
 -React JS
 -Conceptos y Tecnologias provenientes de JavaScript
 -CSS
+-HTML
 
