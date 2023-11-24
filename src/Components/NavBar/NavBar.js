@@ -1,5 +1,5 @@
 import React from 'react'
-import "../NavBar.css";
+import "../CssGeneral.css";
 import CartWidget from './CartWidget';
 import logo from "../../../src/assets/img/logoEros.png"
 import { Link } from "react-router-dom"
@@ -8,9 +8,9 @@ function NavBar() {
   return (
     <nav className="navbar">
       <div className="divNavbarLogo">
-        <img src={logo} alt='Logo' className='logo' />
+        <Link to= "/" ><img src={logo} alt='Logo' className='logo' /></Link>
       </div>
-
+      
       <ul className="navbarList">
         <li className="navbarItem">
           <Link className='ancla' to="/" > Home </Link>
@@ -29,7 +29,7 @@ function NavBar() {
         </li>
 
 
-        <Link to="/Carrito">
+        <Link to="/cart">
 
           <CartWidget />
 

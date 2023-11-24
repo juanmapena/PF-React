@@ -1,6 +1,6 @@
 import React from 'react'
 import Item from '../Item/Item'
-import "../NavBar.css"
+import "../CssGeneral.css"
 
 function ItemList({ item }) {
     return (

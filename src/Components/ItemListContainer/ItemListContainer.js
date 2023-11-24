@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react"
 import "./ItemListContainer.css"
-import Products from "../Json/Products.json"
+import {getFirestore, collection, getDocs, where, query} from "firebase/firestore"
 import ItemList from "../ItemList/ItemList"
 import { useParams } from "react-router-dom"
 
@@ -12,20 +12,17 @@ function ItemListContainer() {
 
 
   useEffect ( () =>{
-    const fetchData = async () =>{
-      try{
-        const data = await new Promise ((resolve)=>{
-          setTimeout (()=>{
-            resolve (id ? Products.filter((item) => item.categoria === id) : Products )
-          },2000)
-        })
-        setItem (data)
-      } catch (error){
-        console.log ("Existe un error", error)
-      }
-    }
+  const queryDb = getFirestore();
+  const queryCollection = collection (queryDb, "products");
+  if (id ){
+    const queryFilter = query(queryCollection, where("categoryId", "==", id))
+    getDocs(queryFilter).then((res) => setItem(res.docs.map((p)=>({id: p.id, ...p.data()})))
+  );
+  }else{
+    getDocs(queryCollection).then((res)=> setItem(res.docs.map((p)=>({id: p.id, ...p.data()})))
+  );
+  }
 
-    fetchData ()
 
   }, [id] )
 

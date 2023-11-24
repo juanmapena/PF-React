@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from "react-router-dom"
-import "../NavBar.css"
+import "../CssGeneral.css"
 
 function Item({item}) {
   return (
@@ -8,15 +8,15 @@ function Item({item}) {
     <div className='card-container'>
         <div className='card'>
 
-        <img className='imagen' src = {item.imagen} alt={item.nombre} />
+        <img className='imagen' src = {item.img} alt={item.title} />
 
     <div className='card-content'>
-    <h1 className='nombre'>{item.nombre}</h1>
+    <h1 className='nombre'>{item.title}</h1>
 
 
     </div>
 
-        </div>
+    </div>
     </div>
     </Link>
   )
